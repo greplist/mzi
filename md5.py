@@ -299,7 +299,7 @@ class MD5:
         d = map(lambda x:"%02x" % x, d)
         d = string.join(d, '')
 
-        return d
+        return d.upper()
 
 
     def copy(self):
@@ -313,4 +313,4 @@ def md5(arg=None):
     return md5
 
 if __name__ == "__main__":
-    print md5("test-data").hexdigest()
+    print md5("md5").hexdigest() == "1BC29B36F623BA82AAF6724FD3B16718"
